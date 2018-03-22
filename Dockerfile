@@ -6,8 +6,8 @@ RUN cd / \
   tar -zxf bundle.tar.gz \
   && cd bundle/programs/server \
   && npm i
-  
+
+ENV MONG_URL
 RUN cd /bundle \
-  && export MONG_URL='mongodb/meteor' \
   && node main.js
   
