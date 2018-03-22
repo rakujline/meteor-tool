@@ -10,6 +10,8 @@ RUN cd / \
 ARG MONGO_URL="mongodb/meteor"
 ARG ROOT_URL="http://example.com"
 
+ENV PORT="3000"
+
 RUN cd /bundle \
   && node main.js; exit 0
   
