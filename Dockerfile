@@ -12,3 +12,4 @@ ARG MONGO_URL
 RUN cd /bundle \
   && node main.js; exit 0
   
+EXPOSE 3000
