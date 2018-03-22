@@ -7,9 +7,8 @@ RUN cd / \
   && cd bundle/programs/server \
   && npm i
 
-ARG MONGO_URL="mongodb/meteor"
-ARG ROOT_URL="http://example.com"
-
+ENV MONGO_URL="mongodb/meteor"
+ENV ROOT_URL="http://example.com"
 ENV PORT="3000"
 
 RUN cd /bundle \
