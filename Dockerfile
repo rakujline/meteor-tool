@@ -7,8 +7,8 @@ RUN cd / \
   && cd bundle/programs/server \
   && npm i
 
-ARG MONGO_URL
-ARG ROOT_URL
+ARG MONGO_URL="mongodb/meteor"
+ARG ROOT_URL="http://example.com"
 
 RUN cd /bundle \
   && node main.js; exit 0
