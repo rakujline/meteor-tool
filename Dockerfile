@@ -8,6 +8,7 @@ RUN cd / \
   && npm i
 
 ARG MONGO_URL
+ARG ROOT_URL
 
 RUN cd /bundle \
   && node main.js; exit 0
