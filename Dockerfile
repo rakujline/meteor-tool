@@ -7,7 +7,8 @@ RUN cd / \
   && cd bundle/programs/server \
   && npm i
 
-ENV MONG_URL
+ARG MONGO_URL
+
 RUN cd /bundle \
   && node main.js
   
