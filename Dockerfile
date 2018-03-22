@@ -1,6 +1,9 @@
 from node:8.10.0
 
-RUN tar -zxf bundle.tar.gz \
+ADD bundle.tar.gz /
+
+RUN cd / \
+  tar -zxf bundle.tar.gz \
   && cd bundle/programs/server \
   && npm i
   
