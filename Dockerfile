@@ -7,9 +7,8 @@ RUN cd / \
   && cd bundle/programs/server \
   && npm i
 
-ARG ARG_MONGO_URL
+ARG MONGO_URL
 
 RUN cd /bundle \
-  && export MONGO_URL=ARG_MONGO_URL
-  && node main.js
+  && node main.js; exit 0
   
