@@ -11,8 +11,6 @@ ENV MONGO_URL="mongodb://mongo_instance:27017/meteor"
 ENV ROOT_URL="http://127.0.0.1"
 ENV PORT="3000"
 
-RUN cd /bundle
-
 EXPOSE 3000
 
-CMD ["node", "main.js"]
+ENTRYPOINT ["node", "/bundle/main.js"]
