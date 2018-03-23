@@ -4,7 +4,7 @@ ADD bundle.tar.gz /
 
 ENV SAVE_DIR="/save"
 
-RUN cd / && mkdir $SAVE_DIR/image
+RUN cd / && mkdir -p $SAVE_DIR/image
 VOLUME $SAVE_DIR
 
 RUN cd / \
