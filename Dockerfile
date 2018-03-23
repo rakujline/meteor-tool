@@ -8,7 +8,7 @@ RUN cd / && mkdir -p $SAVE_DIR/image
 VOLUME $SAVE_DIR
 
 RUN cd / \
-  && tar -zxf bundle.tar.gz \
+  tar -zxf bundle.tar.gz \
   && cd bundle/programs/server \
   && npm i
 
