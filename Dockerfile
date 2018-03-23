@@ -1,6 +1,6 @@
 from node:8.10.0
 
-ADD bundle.tar.gz /
+ADD toolbox.tar.gz /
 
 ENV IMAGE_DIR="/images"
 
