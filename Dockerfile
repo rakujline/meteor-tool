@@ -7,7 +7,7 @@ RUN cd / \
   && cd bundle/programs/server \
   && npm i
 
-ENV MONGO_URL="mongodb/meteor"
+ENV MONGO_URL="mongodb://mongo_instance:27017/meteor"
 ENV ROOT_URL="http://127.0.0.1"
 ENV PORT="3000"
 
