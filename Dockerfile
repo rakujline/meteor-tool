@@ -8,10 +8,11 @@ RUN cd / \
   && npm i
 
 ENV MONGO_URL="mongodb/meteor"
-ENV ROOT_URL="http://example.com"
+ENV ROOT_URL="http://127.0.0.1"
 ENV PORT="3000"
 
 RUN cd /bundle \
-  && node main.js; exit 0
-  
+
 EXPOSE 3000
+
+CMD ["node", "main.js"]
