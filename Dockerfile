@@ -2,13 +2,13 @@ from node:8.10.0
 
 ADD bundle.tar.gz /
 
-ENV SAVE_DIR="/save"
+ENV IMAGE_DIR="/images"
 
-RUN cd / && mkdir -p $SAVE_DIR/image
-VOLUME $SAVE_DIR
+RUN cd / && mkdir -p $IMAGE_DIR
+VOLUME $IMAGE_DIR
 
 RUN cd / \
-  tar -zxf bundle.tar.gz \
+  tar -zxf toolbox.tar.gz \
   && cd bundle/programs/server \
   && npm i
 
