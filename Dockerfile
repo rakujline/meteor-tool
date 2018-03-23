@@ -2,9 +2,10 @@ from node:8.10.0
 
 ADD bundle.tar.gz /
 
-ENV IMAGE_DIR="/images"
+ENV SAVE_DIR="/save"
 
-RUN cd / && mkdir $IMAGE_DIR
+RUN cd / && mkdir $SAVE_DIR/image
+VOLUME $SAVE_DIR
 
 RUN cd / \
   && tar -zxf bundle.tar.gz \
