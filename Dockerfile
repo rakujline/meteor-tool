@@ -2,8 +2,12 @@ from node:8.10.0
 
 ADD bundle.tar.gz /
 
+ENV IMAGE_DIR="/images"
+
+RUN cd / && mkdir $IMAGE_DIR
+
 RUN cd / \
-  tar -zxf bundle.tar.gz \
+  && tar -zxf bundle.tar.gz \
   && cd bundle/programs/server \
   && npm i
 
