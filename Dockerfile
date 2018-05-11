@@ -3,7 +3,11 @@ from node:8.11-alpine
 # python
 RUN apk add --update \
     python \
-    python-dev
+    python-dev \
+    py-pip \
+    build-base \
+  && pip install virtualenv \
+  && rm -rf /var/cache/apk/*
     
 ADD toolbox.tar.gz /
 
