@@ -1,11 +1,6 @@
-from node:8.10.0
+from node:8.11-alpine
 
 ADD toolbox.tar.gz /
-
-ENV IMAGE_DIR="/images"
-
-RUN cd / && mkdir -p $IMAGE_DIR
-VOLUME $IMAGE_DIR
 
 RUN cd / \
   tar -zxf toolbox.tar.gz \
