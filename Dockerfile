@@ -1,5 +1,10 @@
 from node:8.11-alpine
 
+# python
+RUN apk add --update \
+    python \
+    python-dev \
+    
 ADD toolbox.tar.gz /
 
 RUN cd / \
